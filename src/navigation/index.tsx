@@ -32,6 +32,7 @@ import NotFoundScreen from "../screens/NotFoundScreen";
 import HomeScreen from "../screens/HomeScreen";
 import ProfileScreen from "../screens/ProfileScreen";
 import LinkingConfiguration from "./LinkingConfiguration";
+import MatchingScreen from "../screens/MatchingScreen";
 
 export default function Navigation({
   colorScheme,
@@ -114,6 +115,16 @@ function BottomTabNavigator() {
             </Pressable>
           ),
         })}
+      />
+      <BottomTab.Screen
+        name="Matching"
+        component={MatchingScreen}
+        options={{
+          title: "Profile",
+          tabBarIcon: ({ color }) => (
+            <Ionicons name="person-circle-sharp" size={24} color={color} />
+          ),
+        }}
       />
       <BottomTab.Screen
         name="Profile"
